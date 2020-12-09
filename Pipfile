@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+mkdocs = "*"
+Pygments = ">=2.4"
+Markdown = ">=3.2"
+pymdown-extensions = "*"
+mkdocs-material-extensions = "*"
+pygments = "*"
+markdown = "*"
+mkdocs-minify-plugin = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
