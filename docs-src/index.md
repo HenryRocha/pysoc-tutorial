@@ -16,9 +16,9 @@ Para seguir esse tutorial é necessário:
 
 ## Motivação
 
-Os sistemas embarcados sao utilizados com muita frequencia no dia a dia para tarefas diversas. Para tarefas que exigem um alto processamento e alta performance, as linguagens que geralmente sao utilizadas sao as de baixo nivel, como por exemplo o C. Por estar mais proxima da linguagem de maquina, isso a torna muito rapida, mas tambem muito mais complexa de ser utilizada para desenvolvimentos grandes. Por sua vez, o python eh considerado uma das linguagens mais faceis e intuitivas de serem aprendidas. Porem, como o seu nivel eh alto, sua performance eh muito pior do que outras linguagens, o que a impossibilita de ser utilizada em sistemas embarcados que exigem alta performance, principalmente por conta de restricoes de hardware. 
+Os sistemas embarcados são utilizados com muita frequência no dia a dia para tarefas diversas. Para tarefas que exigem um alto processamento e alta performance, as linguagens que geralmente são utilizadas são as de baixo nível, como por exemplo o C. Por estar mais próxima da linguagem de máquina, isso a torna muito rápida, mas também muito mais complexa de ser utilizada para desenvolvimentos grandes. Por sua vez, o Python é considerado uma das linguagens mais fáceis e intuitivas de serem aprendidas. Porém, como o seu nével é alto, sua performance é muito pior do que outras linguagens, o que a impossibilita de ser utilizada em sistemas embarcados que exigem alta performance, principalmente por conta de restrições de hardware. 
 
-Dito isso, seria muito bom conseguir o melhor dos dois mundos: uma rapida linguagem, que seja facil de escrever. Para isso, devemos montar um modulo em Python escrito em C, dessa forma podemos utiliza-lo e nao perder performance ao escrever python. Em outras palavras, podemos escrever programas complexos que irao rodar em sistemas embarcados em python, facilitando o desenvolvimento.
+Dito isso, seria muito bom conseguir o melhor dos dois mundos: uma linguagem rápida e que seja fácil de escrever. Para isso, devemos montar um módulo em Python escrito em C, dessa forma podemos utilizá-lo e não perder performance ao escrever Python. Em outras palavras, podemos escrever programas complexos que irão rodar em sistemas embarcados em Python, facilitando o desenvolvimento.
 
 ## Introdução
 
