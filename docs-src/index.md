@@ -140,22 +140,40 @@ Agora que temos o tamanho do vetor (`n`) e o vetor em si (`v`) podemos chamar a 
 bubble_sort(v, n);
 ```
 
+Com o término da função, teremos um vetor em C ordenado em ordem crescente.
+
+Agora devemos retornar esse vetor ordenado. Para que o valor retornado possa ser interpretado pelo Python posteriormente devemos transformar esse vetor em um PyObject, mais especificamente, uma lista.
+
+Para isso vamos criar uma nova lista com o tamanho `n`.
+
 ```c
-PyObject *pysoc_bubble_sort(PyObject *self, PyObject *args) {
-    // FALTA EXPLICAR ESSA PARTE DO CÓDIGO. TODO
-    PyObject *ret_list = PyList_New(n);
+PyObject *ret_list = PyList_New(n);
+```
 
-    for (Py_ssize_t i = 0; i < n; i++) {
-        PyObject *pl = PyLong_FromLong(v[i]); // Py_BuildValue("i", v[i]);
-        if (pl == NULL) return NULL;
+Em seguida, vamos passar por cada item do vetor em C e convertê-lo em PyObject também, mas dessa vez passando para um tipo _Long_ do Python.
 
-        if (PyList_SetItem(ret_list, i, pl) == -1) return NULL;
-        /* if (PyList_Append(ret_list, pl) == -1) return NULL; */
-    }
+```c
+for (Py_ssize_t i = 0; i < n; i++) {
+    // Converte o valor em C para um tipo Long do Python.
+    PyObject *pl = PyLong_FromLong(v[i]);
+    // Caso esse valor seja NULL, ocorreu um erro
+    // e devemos sair da função.
+    if (pl == NULL) return NULL;
 
-    return ret_list;
+    // Inserindo o valor convertido na lista do Python
+    // e verificando se o retorno dessa função foi -1,
+    // indicando um erro.
+    if (PyList_SetItem(ret_list, i, pl) == -1) return NULL;
 }
 ```
+
+Feito isso, já podemos retornar a lista ordenada.
+
+```c
+return ret_list;
+```
+
+E com isso o nosso módulo está completo!
 
 ## Instalando o módulo
 
