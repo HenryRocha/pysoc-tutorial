@@ -24,9 +24,9 @@ Dito isso, seria muito bom conseguir o melhor dos dois mundos: uma linguagem rá
 
 Existem diversos modos de extender as funcionalidades do Python. Um desses modos é criar uma biblioteca em C. Esse método leva a aumento de performance, além de possibilitar a chamada de funções e bibliotecas C, em um nível baixo.
 
-Um modulo em python pode ser considerado como uma biblioteca, que pode ser importada e utilizada em codigo por um programa. Exemplos de modulos famosos em python sao math, openCV, numpy entre outros. O openCV por exemplo, exige muitas operacoes e poder computacional, por isso eh implementada em C.
+Um módulo em Python pode ser considerado como uma biblioteca, que pode ser importada e utilizada em código por um programa. Exemplos de módulos famosos em Python são _math_, _OpenCV_, _Numpy_, entre outros. O _OpenCV_ por exemplo, exige muitas operações e poder computacional, por isso é implementada em C.
 
-Nesse tutorial, vamos ver como criar um módulo em C que implementa o Bubble Sort, e, posteriormente, comparar sua performance contra o memso algoritmo feito em Python na Raspberry Pi. O Bubble sort foi escolhido pois sua complexidade eh O(n^2) em seu pior caso, por isso a comparacao eh muito mais facil de ser visualizada.
+Nesse tutorial, vamos ver como criar um módulo em C que implementa o Bubble Sort, e, posteriormente, comparar sua performance contra o mesmo algoritmo feito em Python na Raspberry Pi. O Bubble sort foi escolhido pois sua complexidade é O(n^2) em seu pior caso, por isso a comparação é muito mais fácil de ser visualizada.
 
 ## Montando um módulo
 
